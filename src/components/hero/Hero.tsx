@@ -59,7 +59,7 @@ function Hero() {
             className={styles.nextSectionLink}
             variant="h6"
             color="primary"
-            href="#testimonial"
+            href="#testimonials"
           >
             Testimonials
             <ArrowDown className={styles.arrowIcon} />

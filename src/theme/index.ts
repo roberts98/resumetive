@@ -25,6 +25,15 @@ const theme = createMuiTheme({
       xl: 1920,
     },
   },
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        html: {
+          scrollBehavior: 'smooth',
+        },
+      },
+    },
+  },
 });
 
 export default theme;
