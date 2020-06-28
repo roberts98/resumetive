@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
 function Testimonials() {
   const styles = useStyles();
   const wrapperRef = useRef(null);
-  const isInViewport = useElInViewport(wrapperRef, 300);
+  const isInViewport = useElInViewport(wrapperRef, 500);
 
   useEffect(() => {
     if (isInViewport) {
@@ -48,9 +48,9 @@ function Testimonials() {
           opacity: 0,
         })
         .set(firstTestimonial, { x: 600 })
-        .to(firstTestimonial, { x: 0, opacity: 1 })
-        .to(secondTestimonial, { opacity: 1 })
-        .to(thirdTestimonial, { opacity: 1 });
+        .to(firstTestimonial, 1, { x: 0, opacity: 1 })
+        .to(secondTestimonial, 0.5, { opacity: 1 })
+        .to(thirdTestimonial, 0.5, { opacity: 1 });
     }
   }, [isInViewport]);
 
