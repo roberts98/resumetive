@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -26,13 +27,17 @@ export default function Header() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Resumetive
-          </Typography>
+          <Link href="/">
+            <Typography variant="h6" className={classes.title}>
+              Resumetive
+            </Typography>
+          </Link>
           <Button color="inherit">Get started</Button>
           <Button color="inherit">FAQ</Button>
           <Button color="inherit">Contact</Button>
-          <Button color="inherit">My account</Button>
+          <Link href="/login">
+            <Button color="inherit">My account</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>

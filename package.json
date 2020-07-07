@@ -22,6 +22,7 @@
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
+    "framer-motion": "^1.11.1",
     "gsap": "^3.3.4",
     "lodash.debounce": "^4.0.8",
     "next": "9.3.5",

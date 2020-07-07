@@ -2,16 +2,20 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import { AnimatePresence } from 'framer-motion';
 
 import theme from '../theme';
 
 interface AppProps {
   Component: React.FC;
   pageProps: any;
+  router: {
+    route: string;
+  };
 }
 
 export default function App(props: AppProps) {
-  const { Component, pageProps } = props;
+  const { Component, pageProps, router } = props;
 
   useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');
@@ -31,7 +35,9 @@ export default function App(props: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
       </ThemeProvider>
     </>
   );
