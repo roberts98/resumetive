@@ -1,0 +1,17 @@
+{
+  "name": "resumetive-server",
+  "version": "1.0.0",
+  "description": "nodejs server for resumetive app",
+  "main": "index.js",
+  "author": "Robert Sidzinka",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
