@@ -28,7 +28,7 @@ function LoginForm() {
   const styles = useStyles();
 
   return (
-    <div className={styles.wrapper}>
+    <div id="register" className={styles.wrapper}>
       <Typography gutterBottom component="h1" variant="h3">
         Sign in
       </Typography>
